@@ -25,7 +25,7 @@ public class SpawnGrid : MonoBehaviour {
 
                 GameObject block = Instantiate(block1, Vector3.zero, block1.transform.rotation) as GameObject;
                 block.transform.parent = transform;
-                block.transform.localPosition = new Vector3(x * distanceShrinker, 0, z * distanceShrinker);
+                block.transform.position = new Vector3(x * distanceShrinker, 0, z * distanceShrinker);
             }
         }
     }
