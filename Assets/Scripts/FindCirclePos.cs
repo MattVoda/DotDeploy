@@ -34,14 +34,17 @@ public class FindCirclePos : MonoBehaviour {
 	}
 
     void Figure() {
+
         for(int i=1; i<=childCount; i++) {
-
             Vector3 newCirclePos = new Vector3(0, 0, 0);
+            float angleFragment = 360 / childCount;
+            print(angleFragment);
+            float thisDeg = angleFragment * i;
+            print(thisDeg);
+            float rad = thisDeg * Mathf.Deg2Rad;
 
-            float angle = (Mathf.PI / i);
-
-            newCirclePos.x = radius * Mathf.Cos(angle);
-            newCirclePos.y = radius * Mathf.Sin(angle);
+            newCirclePos.z = radius * Mathf.Cos(rad);
+            newCirclePos.x = radius * Mathf.Sin(rad);
 
             circlePositions[i-1] = newCirclePos;
             
